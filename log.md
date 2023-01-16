@@ -52,19 +52,47 @@ def getCycle(path="."):
 
 #### Emplacement des parkings veloMag et des stations de Tramway
 
+```python
+def getInfos(path="."):
+	#Dictionnaire contenant les URLs des stations liés au moyen de transport 
+	urls = {"tram":"https://data.montpellier3m.fr/sites/default/files/ressources/MMM_MMM_ArretsTram.json","veloMag":"https://montpellier-fr-smoove.klervi.net/gbfs/en/station_information.json"}
+	files=[] #Liste qui contiendra les deux fichiers d'informations récupérés
+	for key in urls.keys: #Boucle pour les deux urls
+		response=requests.get(urls[key]) #Récupération du fichier
+		file=open(f"{path}/{key}.json","w+", encoding="UTF-8") #Création des fichiers .json avec les informations
+		file.write(response.text) #Ecriture du fichier
+		file.close() #Fermeture de l'instance du fichier
+		files.append(file.name)#On ajoute le chemin d'accès au fichier dans la liste 
+	return files #On retourne la liste contenant les deux fichiers
+```
+
+#### Emplacement des parkings automobile
+
+A l'aide de Google Maps et de la liste des parkings sur le site d'Open Data Montpellier, j'ai récupéré manuellement les coordonnées GPS des parkings dont nous pouvons traiter les données afin de les utiliser lors du traitement et donc de l'interprétation des données.
+
 ## Mise en forme des données
 
 Pour faciliter les passages entre fichiers, base de données et programmes de traitement des données, j'ai choisi de créer de nouvelles classes, une par type de station
-* Une classe parking contenant
-* Une classe velo contenant
+* Une classe ``parking`` contenant :
+    * Un attribut ``time`` de type ``int`` donnant l'heure de la prise d'information en secondes depuis epoch UNIX
+	* Un attribut ``parkID`` de type ``str`` donnant l'identifiant du parking
+	* Un attribut ``open``de type booléen donnant l'état d'ouverture du parking (True pour ouvert, False pour fermé)
+	* Un attribut ``free`` de type ``int`` donnant le nombre de places libres dans le parking
+	* Un attribut ``total`` de type ``int`` donnant le nombre de places totales dans le parking
+
+* Une classe ``velo`` contenant :
+    * Un attribut ``time`` de type ``int`` donnant l'heure de la prise d'information en secondes depuis epoch UNIX
+	* Un attribut ``id`` de type ``int`` donnant l'identifiant de la station
+	* Un attribut ``bikes``de type ``int`` donnant le nombre de vélos disponibles
+	* Un attribut ``dis`` de type ``int`` donnant le nombre de vélos indisponilbes mais garés à la station
+	* Un attribut ``free``de type ``int`` donnant le nombre de places disponibles à la station
 
 Elles sont définies avec les codes suivants
 #### Classe ``parking``
 
 #### Classe ``velo``
 
-#### Classe ``tram``
-
+Avec ces nouvelles classes, ont peut alors remmettre en question l'utilité de stocker les fichiers. Je vais alors modifier mes fonctions d'acquisition pour qu'elles renvoient des objets avec les classes adaptés. 
 ## Stockage des données
 
 Pour stocker les données, je me suis orienté vers une base SQLite, facile d'utilisation avec python et un type de base avec laquelle j'ai déjà travaillé par le passé.

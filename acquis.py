@@ -16,12 +16,13 @@ def getCycle(path="."):
 	return file.name #On retourne le chemin du ficher
 
 def getInfos(path="."):
+	#Dictionnaire contenant les URLs des stations liés au moyen de transport 
 	urls = {"tram":"https://data.montpellier3m.fr/sites/default/files/ressources/MMM_MMM_ArretsTram.json","veloMag":"https://montpellier-fr-smoove.klervi.net/gbfs/en/station_information.json"}
-	files=[]
-	for key in urls.keys:
-		response=requests.get(urls[key])
-		file=open(f"{path}/{key}.json","w+", encoding="UTF-8")
-		file.write(response.text)
-		file.close()
-		files.append(file.name)
-	return files
+	files=[] #Liste qui contiendra les deux fichiers d'informations récupérés
+	for key in urls.keys: #Boucle pour les deux urls
+		response=requests.get(urls[key]) #Récupération du fichier
+		file=open(f"{path}/{key}.json","w+", encoding="UTF-8") #Création des fichiers .json avec les informations
+		file.write(response.text) #Ecriture du fichier
+		file.close() #Fermeture de l'instance du fichier
+		files.append(file.name)#On ajoute le chemin d'accès au fichier dans la liste 
+	return files #On retourne la liste contenant les deux fichiers
