@@ -1,0 +1,537 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-01-16T17:29:39Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/61079137",
+        "access": "yes",
+        "amenity": "parking",
+        "brand": "Effia",
+        "brand:wikidata": "Q3045894",
+        "brand:wikipedia": "fr:EFFIA",
+        "capacity": "438",
+        "fee": "yes",
+        "maxheight": "1.90",
+        "name": "Arc de Triomphe",
+        "operator": "Effia",
+        "operator:wikidata": "Q3045894",
+        "operator:wikipedia": "fr:EFFIA",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8732287,
+          43.610984
+        ]
+      },
+      "id": "node/61079137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/70894951",
+        "amenity": "parking",
+        "created_by": "Potlatch 0.4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8809543,
+          43.6282333
+        ]
+      },
+      "id": "node/70894951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/251341711",
+        "amenity": "parking",
+        "capacity": "553",
+        "fee": "yes",
+        "name": "Pitot",
+        "operator": "Vinci Park",
+        "type": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8709079,
+          43.6126661
+        ]
+      },
+      "id": "node/251341711"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/280708481",
+        "access": "customers",
+        "amenity": "parking",
+        "capacity": "1922",
+        "capacity:disabled": "yes",
+        "fee": "yes",
+        "layer": "-1",
+        "maxheight": "1.95",
+        "name": "Parking Polygone",
+        "parking": "underground",
+        "type": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.885482,
+          43.6080542
+        ]
+      },
+      "id": "node/280708481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/280982552",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "type": "surface"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.906262,
+          43.6139034
+        ]
+      },
+      "id": "node/280982552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/280982567",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "type": "surface"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.9072064,
+          43.6143162
+        ]
+      },
+      "id": "node/280982567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/280982620",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "type": "surface"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.9055576,
+          43.6136184
+        ]
+      },
+      "id": "node/280982620"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/281171382",
+        "access": "yes",
+        "amenity": "parking",
+        "capacity:disabled": "yes",
+        "fee": "yes",
+        "parking": "street_side",
+        "type": "surface"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8886435,
+          43.6092164
+        ]
+      },
+      "id": "node/281171382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/295103388",
+        "amenity": "parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8983027,
+          43.6078895
+        ]
+      },
+      "id": "node/295103388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/549213070",
+        "amenity": "parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8363903,
+          43.596303
+        ]
+      },
+      "id": "node/549213070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/941546284",
+        "amenity": "parking",
+        "capacity": "436",
+        "fee": "yes",
+        "layer": "-1",
+        "name": "Parking Le Triangle",
+        "opening_hours": "24/7",
+        "operator": "Indigo",
+        "parking": "underground",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+        "type": "underground",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8817651,
+          43.6093324
+        ]
+      },
+      "id": "node/941546284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1560685410",
+        "amenity": "parking",
+        "layer": "-1",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8658599,
+          43.5974044
+        ]
+      },
+      "id": "node/1560685410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2024149420",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "yes",
+        "parking": "surface"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8995564,
+          43.6045472
+        ]
+      },
+      "id": "node/2024149420"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2575586515",
+        "access": "yes",
+        "amenity": "parking",
+        "capacity": "472",
+        "fee": "yes",
+        "layer": "-1",
+        "name": "Gambetta",
+        "operator:type": "public",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8742495,
+          43.6053179
+        ]
+      },
+      "id": "node/2575586515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3350326125",
+        "amenity": "parking",
+        "capacity": "400",
+        "name": "Garcia Lorca",
+        "operator": "Transports de l'agglomération de Montpellier",
+        "park_ride": "yes",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8910228,
+          43.5904217
+        ]
+      },
+      "id": "node/3350326125"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4434333600",
+        "access": "yes",
+        "amenity": "parking",
+        "capacity": "685",
+        "capacity:disabled": "9",
+        "fee": "yes",
+        "maxheight": "1.9",
+        "name": "Foch Préfecture",
+        "operator": "Vinci Park",
+        "parking": "underground",
+        "ref:FR:BNLS": "34172-P-006",
+        "source": "Équipe du Point d'Accès National - 2021-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8764968,
+          43.6106446
+        ]
+      },
+      "id": "node/4434333600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724175524",
+        "amenity": "parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8518205,
+          43.6152923
+        ]
+      },
+      "id": "node/5724175524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724175525",
+        "amenity": "parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.851736,
+          43.6153098
+        ]
+      },
+      "id": "node/5724175525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724175526",
+        "amenity": "parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8516112,
+          43.6153127
+        ]
+      },
+      "id": "node/5724175526"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5839382288",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "yes",
+        "maxstay": "20 minutes",
+        "name": "dépose rapide",
+        "operator": "EFFIA",
+        "parking": "surface",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.9232287,
+          43.5940873
+        ]
+      },
+      "id": "node/5839382288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5839382289",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "yes",
+        "name": "Parking Gare Montpellier Sud de France",
+        "operator": "EFFIA",
+        "parking": "surface"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.9240736,
+          43.5940971
+        ]
+      },
+      "id": "node/5839382289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6115513273",
+        "amenity": "parking",
+        "capacity": "473",
+        "layer": "-1",
+        "name": "Corum",
+        "operator": "TAM stationnement",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8816467,
+          43.6134439
+        ]
+      },
+      "id": "node/6115513273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7928562222",
+        "amenity": "parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.883848,
+          43.6100699
+        ]
+      },
+      "id": "node/7928562222"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9110916095",
+        "access": "private",
+        "amenity": "parking",
+        "layer": "-1",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8615787,
+          43.6024591
+        ]
+      },
+      "id": "node/9110916095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9110995891",
+        "access": "private",
+        "amenity": "parking",
+        "layer": "-1",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8599283,
+          43.6002058
+        ]
+      },
+      "id": "node/9110995891"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9691740317",
+        "access": "customers",
+        "amenity": "parking",
+        "fee": "yes",
+        "layer": "-1",
+        "name": "P+tram Charles de Gaulle",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8973875,
+          43.6292267
+        ]
+      },
+      "id": "node/9691740317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9691740320",
+        "access": "private",
+        "amenity": "parking",
+        "layer": "-1",
+        "parking": "underground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8967958,
+          43.6290838
+        ]
+      },
+      "id": "node/9691740320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10265848117",
+        "amenity": "parking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8564511,
+          43.6054882
+        ]
+      },
+      "id": "node/10265848117"
+    }
+  ]
+}
