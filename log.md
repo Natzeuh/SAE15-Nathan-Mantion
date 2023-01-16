@@ -21,7 +21,7 @@ A la lecture du sujet, on remarque qu'il faudra produire un outil qui permettra 
 	    * date de début
 		* date de fin
 		* laps de temps
-	* Permettre un affichage sur un plan géographique de la ville
+	* Permettre un affichage sur un plan géographique de la ville (à faire si le temps le permets)
 
 Pour l'instant, nous garderons l'interprétation des données pour l'humain, il n'est pas exclu qu'un programme pouvant interpréter les données soit codé
 
@@ -62,3 +62,6 @@ Il me faut alors des fonctions pour enregistrer mes données dans ma base
 #### Enregistrement d'un objet de classe ``velo``
 
 #### Enregistrement d'un objet de classe ``tram``
+
+## Traitement des données
+Le traitement des données se fera via python et GNUplot. Dans un premier temps, nous ferons des graphiques qui ne seront que sauvegardés en fichiers images. A terme, si le temps le permet, il sera possible d'ajouter une interface graphique à notre programme
