@@ -25,16 +25,27 @@ A la lecture du sujet, on remarque qu'il faudra produire un outil qui permettra 
 
 Pour l'instant, nous garderons l'interprétation des données pour l'humain, il n'est pas exclu qu'un programme pouvant interpréter les données soit codé
 
-La collecte des données étant primordiale pour le reste des tâches, ce sera la première chose à laquelle je vais m'atteller. Il est urgent de faire ces programmes afin de lancer au plus vite la capture de données.
 
 ## Acquisition des données
+
+En regardant les données disponibles sur le site Open Data Montpellier, on voit que les données en rapport avec le tramway ne peuvent pas nous donner d'informations sur leur utilisation, nous ne pouvons avoir que des informations géographiques qui nous serviront pour le traitement et l'interpretation. Pour rendre mon code utilisable uniquement avec les programmes, je chosis tout de même d'ajouter une fonction pour récupérer le fichier contenant les informations sur les stations de tramway de la ville.
+
+#### Parkings automobiles
+```python
+def getPark(idPark:str,path="."):
+	response=requests.get(f"https://data.montpellier3m.fr/sites/default/files/ressources/{idPark}.xml") #Acquision du fichier xml du parking grâce à la variable idPark qui renseigne l'identifiant du parking
+	file=open(f"{path}/{idPark}_{int(time.time())}.xml","w+", encoding="UTF-8") #Création d'un fichier pour stocker le contenu du fichier .xml téléchargé, si l'utilisateur veut enregistrer le fichier dans un répertoire particulier, il peut renseigner la variable ``path`` par défaut, la fonction sauvergarde le fichier dans le même répertoire que le programme
+	file.write(response.text) #Ecriture du ficher
+	file.close() #Fermeture de l'instance de fichier
+	return file.name #On retourne le chemin du fichier.
+```
+
 
 ## Mise en forme des données
 
 Pour faciliter les passages entre fichiers, base de données et programmes de traitement des données, j'ai choisi de créer de nouvelles classes, une par type de station
 * Une classe parking contenant
 * Une classe velo contenant
-* Une classe tram contenant
 
 Elles sont définies avec les codes suivants
 #### Classe ``parking``
