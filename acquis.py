@@ -124,6 +124,17 @@ class velo:
 			raise TypeError("statID must be an int !")
 
 	@property
+	def bikes(self):
+		return self._bikes
+	@bikes.setter
+	def bikes(self,bikes):
+		#check si dis est bien un int
+		if type(bikes)==int:
+			self._bikes==bikes
+		else:
+			raise TypeError("bikes must be an int !")
+
+	@property
 	def dis(self):
 		return self._dis 
 	@dis.setter
