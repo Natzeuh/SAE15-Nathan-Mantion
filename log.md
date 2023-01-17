@@ -31,6 +31,7 @@ Pour l'instant, nous garderons l'interprétation des données pour l'humain, il 
 En regardant les données disponibles sur le site Open Data Montpellier, on voit que les données en rapport avec le tramway ne peuvent pas nous donner d'informations sur leur utilisation, nous ne pouvons avoir que des informations géographiques qui nous serviront pour le traitement et l'interpretation. Pour rendre mon code utilisable uniquement avec les programmes, je chosis tout de même d'ajouter une fonction pour récupérer le fichier contenant les informations sur les stations de tramway de la ville. Je profite de cette fonction pour prendre les mêmes informations sur les station veloMag. Pour les parkings automobiles, les informations n'existent pas sur le site de l'agglomération, je vais alors créer un fichier .csv manuellement.
 
 #### Parkings automobiles
+
 ```python
 def getPark(idPark:str,path="."):
     response=requests.get(f"https://data.montpellier3m.fr/sites/default/files/ressources/{idPark}.xml") #Acquision du fichier xml du parking grâce à la variable idPark qui renseigne l'identifiant du parking
@@ -41,6 +42,7 @@ def getPark(idPark:str,path="."):
 ```
 
 #### Parkings veloMag
+
 ```python
 def getCycle(path="."):
     response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
@@ -159,71 +161,75 @@ class parking:
 
 ```python
 class velo:
-	def __init__(self,statID,bikes,dis,free):
-		self._time==int(time.time())
-		self._statID==statID
-		self._bikes=bikes
-		self._dis=dis
-		self._free=free
+    def __init__(self,statID,bikes,dis,free):
+        self._time=int(time.time())
+        self._statID=statID
+        self._bikes=bikes
+        self._dis=dis
+        self._free=free
 
-	#défintion des getter et setters des attributs
-	@property
-	def time(self):
-		return self.time
-	@time.setter
-	def time(self,time):
-		#check si time est bien un entier
-		if type(time) == int:
-			self._time == time
-		else:
-			raise TypeError("time type must be an int !")
+    #défintion des getter et setters des attributs
+    @property
+    def time(self):
+        return self._time
+    @time.setter
+    def time(self,time):
+        #check si time est bien un entier
+        if type(time) == int:
+            self._time == time
+        else:
+            raise TypeError("time type must be an int !")
 
-	@property
-	def statID(self):
-		return self._parkID
-	@statID.setter
-	def statID(self,statID):
-		#check si statID est bien un entier
-		if type(statID) == int:
-			self._statID=statID
-		else:
-			raise TypeError("statID must be an int !")
+    @property
+    def statID(self):
+        return self._parkID
+    @statID.setter
+    def statID(self,statID):
+        #check si statID est bien un entier
+        if type(statID) == int:
+            self._statID=statID
+        else:
+            raise TypeError("statID must be an int !")
 
-	@property
-	def bikes(self):
-		return self._bikes
-	@bikes.setter
-	def bikes(self,bikes):
-		#check si dis est bien un int
-		if type(bikes)==int:
-			self._bikes==bikes
-		else:
-			raise TypeError("bikes must be an int !")
+    @property
+    def bikes(self):
+        return self._bikes
+    @bikes.setter
+    def bikes(self,bikes):
+        #check si dis est bien un int
+        if type(bikes)==int:
+            self._bikes==bikes
+        else:
+            raise TypeError("bikes must be an int !")
 
-	@property
-	def dis(self):
-		return self._dis 
-	@dis.setter
-	def dis(self,dis):
-		#check si dis est bien un int
-		if type(dis)==int:
-			self._dis==dis
-		else:
-			raise TypeError("dis must be an int !")
+    @property
+    def dis(self):
+        return self._dis 
+    @dis.setter
+    def dis(self,dis):
+        #check si dis est bien un int
+        if type(dis)==int:
+            self._dis==dis
+        else:
+            raise TypeError("dis must be an int !")
 
-	@property
-	def free(self):
-		return self._free
-	@free.setter
-	def free(self,free):
-		#check si free est bien un int
-		if type(free) == int:
-			self._free=free
-		else:
-			raise TypeError("free must be an int !")
+    @property
+    def free(self):
+        return self._free
+    @free.setter
+    def free(self,free):
+        #check si free est bien un int
+        if type(free) == int:
+            self._free=free
+        else:
+            raise TypeError("free must be an int !")
 ```
 
-Avec ces nouvelles classes, ont peut alors remmettre en question l'utilité de stocker les fichiers. Je vais alors modifier mes fonctions d'acquisition pour qu'elles renvoient des objets avec les classes adaptés. 
+Avec ces nouvelles classes, nous pouvons alors stocker les fichiers enregistrés sur des variables, stockables par la suite dans une base de données. Il n'est alors plus utile de stocker directement les fichiers.
+Je vais alors créer de nouvelles fonctions d'acquisition afin qu'elle ne renvoient plus un chemin d'accès vers un fichier mais un objet.
+Toutefois, mes fonctions de téléchargement de fichiers vont rester dans le module au cas où j'en aurais besoin dans la suite de la SAE. Je vais changer leurs noms pour ``getParkFile`` et ``getCycleFile``. Ma fonction ``getInfos`` ne changera pas puisqu'elle n'est pas concernée directement par les nouvelles classes.
+
+#### Code de la nouvelle fonction ``getPark``
 ## Stockage des données
 
 Pour stocker les données, je me suis orienté vers une base SQLite, facile d'utilisation avec python et un type de base avec laquelle j'ai déjà travaillé par le passé.
