@@ -93,7 +93,7 @@ Elles sont définies avec les codes suivants
 ```python
 class parking:
     def __init__(self,parkID,open,free,total):
-        self._time=time
+        self._time=int(time.time())
         self._parkID=parkID
         self._open=open
         self._free=free

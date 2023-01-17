@@ -29,7 +29,7 @@ def getInfos(path="."):
 
 class parking:
 	def __init__(self,parkID,open,free,total):
-		self._time=time
+		self._time=int(time.time())
 		self._parkID=parkID
 		self._open=open
 		self._free=free
@@ -92,3 +92,55 @@ class parking:
 			raise TypeError("total must be an int !")
 	
 
+class velo:
+	def __init__(self,statID,bikes,dis,free):
+		self._time==int(time.time())
+		self._statID==statID
+		self._bikes=bikes
+		self._dis=dis
+		self._free=free
+
+	#défintion des getter et setters des attributs
+	@property
+	def time(self):
+		return self.time
+	@time.setter
+	def time(self,time):
+		#check si time est bien un entier
+		if type(time) == int:
+			self._time == time
+		else:
+			raise TypeError("time type must be an int !")
+
+	@property
+	def statID(self):
+		return self._parkID
+	@statID.setter
+	def statID(self,statID):
+		#check si statID est bien un entier
+		if type(statID) == int:
+			self._statID=statID
+		else:
+			raise TypeError("statID must be an int !")
+
+	@property
+	def dis(self):
+		return self._dis 
+	@dis.setter
+	def dis(self,dis):
+		#check si dis est bien un int
+		if type(dis)==int:
+			self._dis==dis
+		else:
+			raise TypeError("dis must be an int !")
+
+	@property
+	def free(self):
+		return self._free
+	@free.setter
+	def free(self,free):
+		#check si free est bien un int
+		if type(free) == int:
+			self._free=free
+		else:
+			raise TypeError("free must be an int !")
