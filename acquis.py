@@ -1,6 +1,8 @@
 import requests
 import time
 from lxml import etree
+from io import StringIO
+import json
 
 def getParkFile(idPark:str,path="."):
 	response=requests.get(f"https://data.montpellier3m.fr/sites/default/files/ressources/{idPark}.xml") #Acquision du fichier xml du parking grâce à la variable idPark qui renseigne l'identifiant du parking
@@ -15,6 +17,8 @@ def getCycleFile(path="."):
 	file.write(response.text) #Ecriture du fichier
 	file.close() #Fermeture de l'instance du fichier
 	return file.name #On retourne le chemin du ficher
+
+getCycleFile()
 
 def getInfos(path="."):
 	#Dictionnaire contenant les URLs des stations liés au moyen de transport 
@@ -167,4 +171,14 @@ def getPark(idPark:str):
 	response=requests.get(f"https://data.montpellier3m.fr/sites/default/files/ressources/{idPark}.xml") #Acquision du fichier xml du parking grâce à la variable idPark qui renseigne l'identifiant du parking
 	if not "Page non trouvée" in response.text: #On vérifie que le fichier récupéré est bien un fichier valide et non une erreur 404
 		tree = etree.fromstring(str(response.text).encode()) #Le contenu du fichier récupéré est ensuite encodé en UTF-8 pour qu'il soit compris par la libraire lxml puis mis sous forme d'élément Etree
-		return parking(idPark,tree.xpath("Status")[0].text=="Open",int(tree.xpath("Free")[0].text),int(tree.xpath("Total")[0].text))
+		return parking(idPark,tree.xpath("Status")[0].text=="Open",int(tree.xpath("Free")[0].text),int(tree.xpath("Total")[0].text)) #On crée et renvoie l'objet parking
+
+def getCycle():
+	result=[] #Intialisation de la liste qui va contenir les objets velo, un objet par station
+	response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
+	content=StringIO(response.text) #On convertit la chaine de caratéres du contenu du fichier en chaine considérable comme un fichier pour l'utiliser avec la libraire json
+	content=json.load(content) #On load le fichier, il sera alors convertit en objets itérables et donc utilisables
+	for station in content["data"]["stations"]: #le dictionnaire data contient la liste stations qui elle même contient les dictionnaires représentant chaque stations
+		#On crée et ajoute l'objet vélo à la liste qui sera retournée en fin de fonction
+		result.append(velo(int(station["station_id"]),int(station["num_bikes_available"]),int(station["num_bikes_disabled"]),int(station["num_docks_available"])))
+	return result #On renvoie la liste contenant l'état de chaque station.

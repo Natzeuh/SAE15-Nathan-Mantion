@@ -230,14 +230,40 @@ Je vais alors créer de nouvelles fonctions d'acquisition afin qu'elle ne renvoi
 Toutefois, mes fonctions de téléchargement de fichiers vont rester dans le module au cas où j'en aurais besoin dans la suite de la SAE. Je vais changer leurs noms pour ``getParkFile`` et ``getCycleFile``. Ma fonction ``getInfos`` ne changera pas puisqu'elle n'est pas concernée directement par les nouvelles classes.
 
 #### Code de la nouvelle fonction ``getPark``
+
+```python
+def getPark(idPark:str):
+    response=requests.get(f"https://data.montpellier3m.fr/sites/default/files/ressources/{idPark}.xml") #Acquision du fichier xml du parking grâce à la variable idPark qui renseigne l'identifiant du parking
+    if not "Page non trouvée" in response.text: #On vérifie que le fichier récupéré est bien un fichier valide et non une erreur 404
+        tree = etree.fromstring(str(response.text).encode()) #Le contenu du fichier récupéré est ensuite encodé en UTF-8 pour qu'il soit compris par la libraire lxml puis mis sous forme d'élément Etree
+        return parking(idPark,tree.xpath("Status")[0].text=="Open",int(tree.xpath("Free")[0].text),int(tree.xpath("Total")[0].text)) #On crée et renvoie l'objet parking
+```
+
+#### Code de la nouvelle fonction ``getCycle``
+
+```python
+def getCycle():
+    result=[] #Intialisation de la liste qui va contenir les objets velo, un objet par station
+    response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
+    content=StringIO(response.text) #On convertit la chaine de caratéres du contenu du fichier en chaine considérable comme un fichier pour l'utiliser avec la libraire json
+    content=json.load(content) #On load le fichier, il sera alors convertit en objets itérables et donc utilisables
+    for station in content["data"]["stations"]: #le dictionnaire data contient la liste stations qui elle même contient les dictionnaires représentant chaque stations
+        #On crée et ajoute l'objet vélo à la liste qui sera retournée en fin de fonction
+        result.append(velo(int(station["station_id"]),int(station["num_bikes_available"]),int(station["num_bikes_disabled"]),int(station["num_docks_available"])))
+    return result #On renvoie la liste contenant l'état de chaque station.
+```
+
+
 ## Stockage des données
 
 Pour stocker les données, je me suis orienté vers une base SQLite, facile d'utilisation avec python et un type de base avec laquelle j'ai déjà travaillé par le passé.
 
-Il me faudra donc 3 tables 
-* Table de parkings
-* Table de vélo
-* Table de tram
+Il me faudra alors plusieurs tables
+* Une table qui contiendra les acquisitions des parkings
+* Une table qui contiendra les acquisitions des stations VeloMagg
+* Une table pour mettre en relation les ids des stations VeloMagg avec leurs informations
+* Une table pour mettre en relation les ids des pakings avec leurs informations
+* Une table pour inscrire les informations des stations de tramway (utiles pour l'intérprétation des données)
 
 [Conception de la table]
 
