@@ -164,4 +164,5 @@ velo(1,3,0,9)
 
 
 def getPark(parkID):
-	#ça arrive
+	response=requests.get(f"https://data.montpellier3m.fr/sites/default/files/ressources/{idPark}.xml") #Acquision du fichier xml du parking grâce à la variable idPark qui renseigne l'identifiant du parking
+	
