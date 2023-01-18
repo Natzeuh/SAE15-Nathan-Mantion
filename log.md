@@ -274,18 +274,56 @@ Il me faudra alors plusieurs tables
 |:-:|:-:|:-:|:-:|
 |Identifiant du parking et clé primaire|Nom complet du parking|Latitude des coordonnées du parking|Longitude des coordonnées du parking|
 |str|str|float|float|
+
+Nous donnant alors le code SQL suivant :
+
+```SQL
+CREATE TABLE "infosPark" (
+	"id"	TEXT,
+	"name"	TEXT,
+	"lat"	REAL,
+	"long"	REAL,
+	PRIMARY KEY("id")
+);
+```
+
 #### Table ``infosVelo``
 
 |id|name|lat|long|capacity|
 |:-:|:-:|:-:|:-:|:-:|
 |Identifiant de la station et clé primaire|Nom complet de la station|Latitude de la station|Longitude de la station|Capacité de la station|
 |int|str|float|float|int|
+
+Nous donnant alors le code SQL suivant :
+
+```SQL
+CREATE TABLE "infosVelo" (
+	"id"	INTEGER,
+	"name"	TEXT,
+	"lat"	REAL,
+	"long"	REAL,
+	"capacity"	INTEGER,
+	PRIMARY KEY("id")
+);
+```
+
 #### Table ``infosTram``
 
 |nom|lat|long|
 |:-:|:-:|:-:|
 |Nom de la station et clé primaire|Latitude de la sation|Longitude de la station|
 |str|float|float|
+
+Nous donnant alors le code SQL suivant :
+
+```SQL
+CREATE TABLE "infosTram" (
+	"name"	TEXT,
+	"lat"	REAL,
+	"long"	REAL,
+	PRIMARY KEY("name")
+);
+```
 
 Il était nécessaire de faires ces trois tables en premier afin de pouvoir les lier avec les tables d'acquisition
 
@@ -294,20 +332,12 @@ Il était nécessaire de faires ces trois tables en premier afin de pouvoir les 
 |idAcquis|time|idPark|free|total|occup|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |Clé primaire de la table|Heure d'acquisition epoch|Identifiant du parking|Nombre de places libres|Nombre de places total|Taux d'occupation du parking|
-|int en Auto-incrémentation|int|str|int|int|float|
+|int en Auto-incrémentation|int|str Clé étrangère: id de infosPark|int|int|float|
 
-Nous donnant alors le code SQL suivant
+Nous donnant alors le code SQL suivant :
 
 ```sql
-CREATE TABLE "acquisPark" (
-	"idAcquis"	INTEGER,
-	"Time"	INTEGER,
-	"idPark"	TEXT,
-	"free"	INTEGER,
-	"total"	INTEGER,
-	"occup"	REAL,
-	PRIMARY KEY("idAcquis" AUTOINCREMENT)
-);
+
 ```
 
 #### Table ``acquisVelo``
@@ -316,6 +346,8 @@ CREATE TABLE "acquisPark" (
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Clé primaire de la table|Heure d'acquisition epoch|Identifiant de la station VeloMagg|Nombre de vélos disponibles|Nombre de vélos non-disponibles|Nombre de docks libres|Nombre de docks total|Taux d'occupation de la station|
 |int en Auto-incrémentation|int|int clé étrangère de idStat sur la table statVelo|int|int|int|int|int|
+
+Nous donnant alors le code SQL suivant :
 
 Il me faut alors des fonctions pour enregistrer mes données dans ma base, je crée alors un deuxième module contenant mes fonctions d'enregistrement.
 
