@@ -266,7 +266,18 @@ Il me faudra alors plusieurs tables
 * Une table pour mettre en relation les ids des pakings avec leurs informations
 * Une table pour inscrire les informations des stations de tramway (utiles pour l'intérprétation des données)
 
-[Conception de la table]
+### Conception des tables
+
+#### Table ``aquisPark``
+
+|idAcquis|time|idPark|free|total|occup|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Clé primaire de la table|Heure d'acquisition epoch|Identifiant du parking|Nombre de places libres|Nombre de places total|Taux d'occupation du parking|
+|int en Auto-incrémentation|int|str|int|int|float|
+
+Nous donnant alors le code SQL suivant
+
+
 
 Il me faut alors des fonctions pour enregistrer mes données dans ma base, je crée alors un deuxième module contenant mes fonctions d'enregistrement.
 
