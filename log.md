@@ -269,7 +269,10 @@ Il me faudra alors plusieurs tables
 ### Conception des tables
 
 #### Table ``infosPark``
-
+|id|nom|long|lat|
+|:-:|:-:|:-:|:-:|
+|Identifiant du parking et clé primaire|Nom complet du parking|Longitude des coordonnées du parking|Latitute des coordonnées du parking|
+|str|str|float|float|
 #### Table ``infosVelo``
 
 #### Table ``infosTram``
