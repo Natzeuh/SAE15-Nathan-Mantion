@@ -1,8 +1,8 @@
-# Journal de bord SAE 15
+# Rapport d'activité - SAE 15 - Nathan Mantion
 
 Dans le cadre de la SAE 1.5 - Traiter des donnés, j'ai été amené à mener un projet de collecte, stockage et traitement de données. 
 
-16/01/2023 - Lecture du sujet
+## Lecture du sujet
 
 A la lecture du sujet, on remarque qu'il faudra produire un outil qui permettra les choses suivantes
 * Collecte des données
@@ -268,6 +268,15 @@ Il me faudra alors plusieurs tables
 
 ### Conception des tables
 
+#### Table ``infosPark``
+
+#### Table ``infosVelo``
+
+#### Table ``infosTram``
+
+
+Il était nécessaire de faires ces trois tables en premier afin de pouvoir les lier avec les tables d'acquisition
+
 #### Table ``acquisPark``
 
 |idAcquis|time|idPark|free|total|occup|
@@ -291,7 +300,10 @@ CREATE TABLE "acquisPark" (
 
 #### Table ``acquisVelo``
 
-
+|idAcquis|time|idStat|bikes|dis|free|total|occup|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|Clé primaire de la table|Heure d'acquisition epoch|Identifiant de la station VeloMagg|Nombre de vélos disponibles|Nombre de vélos non-disponibles|Nombre de docks libres|Nombre de docks total|Taux d'occupation de la station|
+|int en Auto-incrémentation|int|int clé étrangère de idStat sur la table statVelo|int|int|int|int|int|
 
 Il me faut alors des fonctions pour enregistrer mes données dans ma base, je crée alors un deuxième module contenant mes fonctions d'enregistrement.
 
