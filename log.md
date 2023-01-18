@@ -269,14 +269,23 @@ Il me faudra alors plusieurs tables
 ### Conception des tables
 
 #### Table ``infosPark``
-|id|nom|long|lat|
+
+|id|name|lat|long|
 |:-:|:-:|:-:|:-:|
-|Identifiant du parking et clé primaire|Nom complet du parking|Longitude des coordonnées du parking|Latitute des coordonnées du parking|
+|Identifiant du parking et clé primaire|Nom complet du parking|Latitude des coordonnées du parking|Longitude des coordonnées du parking|
 |str|str|float|float|
 #### Table ``infosVelo``
 
+|id|name|lat|long|capacity|
+|:-:|:-:|:-:|:-:|:-:|
+|Identifiant de la station et clé primaire|Nom complet de la station|Latitude de la station|Longitude de la station|Capacité de la station|
+|int|str|float|float|int|
 #### Table ``infosTram``
 
+|nom|lat|long|
+|:-:|:-:|:-:|
+|Nom de la station et clé primaire|Latitude de la sation|Longitude de la station|
+|str|float|float|
 
 Il était nécessaire de faires ces trois tables en premier afin de pouvoir les lier avec les tables d'acquisition
 
