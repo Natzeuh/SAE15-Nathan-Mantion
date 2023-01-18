@@ -1,3 +1,4 @@
+import time
 class parking:
 	def __init__(self,parkID,open,free,total):
 		self._time=int(time.time())
