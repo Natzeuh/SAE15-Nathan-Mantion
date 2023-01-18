@@ -259,6 +259,7 @@ def getCycle():
 Pour stocker les données, je me suis orienté vers une base SQLite, facile d'utilisation avec python et un type de base avec laquelle j'ai déjà travaillé par le passé.
 
 Il me faudra alors plusieurs tables
+
 * Une table qui contiendra les acquisitions des parkings
 * Une table qui contiendra les acquisitions des stations VeloMagg
 * Une table pour mettre en relation les ids des stations VeloMagg avec leurs informations
@@ -267,7 +268,7 @@ Il me faudra alors plusieurs tables
 
 [Conception de la table]
 
-Il me faut alors des fonctions pour enregistrer mes données dans ma base
+Il me faut alors des fonctions pour enregistrer mes données dans ma base, je crée alors un deuxième module contenant mes fonctions d'enregistrement.
 
 #### Enregistrement d'un objet de classe ``parking``
 
