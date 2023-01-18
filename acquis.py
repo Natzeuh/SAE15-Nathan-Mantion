@@ -12,7 +12,7 @@ def getParkFile(idPark:str,path="."):
 	file.close() #Fermeture de l'instance de fichier
 	return file.name #On retourne le chemin du fichier.
 
-def getCycleFile(path="."):
+def getVeloFile(path="."):
 	response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
 	file=open(f"{path}/veloMag_{int(time.time())}.json","w+", encoding="UTF-8")#Création d'un fichier pour stocker le contenu du fichier .json téléchargé, si l'utilisateur veut enregistrer le fichier dans un répertoire particulier, il peut renseigner la variable ``path`` par défaut, la fonction sauvergarde le fichier dans le même répertoire que le programme
 	file.write(response.text) #Ecriture du fichier
@@ -37,7 +37,7 @@ def getPark(idPark:str):
 		tree = etree.fromstring(str(response.text).encode()) #Le contenu du fichier récupéré est ensuite encodé en UTF-8 pour qu'il soit compris par la libraire lxml puis mis sous forme d'élément Etree
 		return parking(idPark,tree.xpath("Status")[0].text=="Open",int(tree.xpath("Free")[0].text),int(tree.xpath("Total")[0].text)) #On crée et renvoie l'objet parking
 
-def getCycle():
+def getVelo():
 	result=[] #Intialisation de la liste qui va contenir les objets velo, un objet par station
 	response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
 	content=StringIO(response.text) #On convertit la chaine de caratéres du contenu du fichier en chaine considérable comme un fichier pour l'utiliser avec la libraire json

@@ -44,7 +44,7 @@ def getPark(idPark:str,path="."):
 #### Parkings veloMag
 
 ```python
-def getCycle(path="."):
+def getVelo(path="."):
     response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
     file=open(f"{path}/veloMag_{int(time.time())}.json","w+", encoding="UTF-8")#Création d'un fichier pour stocker le contenu du fichier .json téléchargé, si l'utilisateur veut enregistrer le fichier dans un répertoire particulier, il peut renseigner la variable ``path`` par défaut, la fonction sauvergarde le fichier dans le même répertoire que le programme
     file.write(response.text) #Ecriture du fichier
@@ -227,7 +227,7 @@ class velo:
 
 Avec ces nouvelles classes, nous pouvons alors stocker les fichiers enregistrés sur des variables, stockables par la suite dans une base de données. Il n'est alors plus utile de stocker directement les fichiers.
 Je vais alors créer de nouvelles fonctions d'acquisition afin qu'elle ne renvoient plus un chemin d'accès vers un fichier mais un objet.
-Toutefois, mes fonctions de téléchargement de fichiers vont rester dans le module au cas où j'en aurais besoin dans la suite de la SAE. Je vais changer leurs noms pour ``getParkFile`` et ``getCycleFile``. Ma fonction ``getInfos`` ne changera pas puisqu'elle n'est pas concernée directement par les nouvelles classes.
+Toutefois, mes fonctions de téléchargement de fichiers vont rester dans le module au cas où j'en aurais besoin dans la suite de la SAE. Je vais changer leurs noms pour ``getParkFile`` et ``getVeloFile``. Ma fonction ``getInfos`` ne changera pas puisqu'elle n'est pas concernée directement par les nouvelles classes.
 
 #### Code de la nouvelle fonction ``getPark``
 
@@ -239,10 +239,10 @@ def getPark(idPark:str):
         return parking(idPark,tree.xpath("Status")[0].text=="Open",int(tree.xpath("Free")[0].text),int(tree.xpath("Total")[0].text)) #On crée et renvoie l'objet parking
 ```
 
-#### Code de la nouvelle fonction ``getCycle``
+#### Code de la nouvelle fonction ``getVelo``
 
 ```python
-def getCycle():
+def getVelo():
     result=[] #Intialisation de la liste qui va contenir les objets velo, un objet par station
     response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
     content=StringIO(response.text) #On convertit la chaine de caratéres du contenu du fichier en chaine considérable comme un fichier pour l'utiliser avec la libraire json
@@ -288,6 +288,10 @@ CREATE TABLE "acquisPark" (
 	PRIMARY KEY("idAcquis" AUTOINCREMENT)
 );
 ```
+
+#### Table ``acquisVelo``
+
+
 
 Il me faut alors des fonctions pour enregistrer mes données dans ma base, je crée alors un deuxième module contenant mes fonctions d'enregistrement.
 
