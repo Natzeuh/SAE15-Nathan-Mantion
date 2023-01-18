@@ -268,7 +268,7 @@ Il me faudra alors plusieurs tables
 
 ### Conception des tables
 
-#### Table ``aquisPark``
+#### Table ``acquisPark``
 
 |idAcquis|time|idPark|free|total|occup|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -277,7 +277,17 @@ Il me faudra alors plusieurs tables
 
 Nous donnant alors le code SQL suivant
 
-
+```sql
+CREATE TABLE "acquisPark" (
+	"idAcquis"	INTEGER,
+	"Time"	INTEGER,
+	"idPark"	TEXT,
+	"free"	INTEGER,
+	"total"	INTEGER,
+	"occup"	REAL,
+	PRIMARY KEY("idAcquis" AUTOINCREMENT)
+);
+```
 
 Il me faut alors des fonctions pour enregistrer mes données dans ma base, je crée alors un deuxième module contenant mes fonctions d'enregistrement.
 
