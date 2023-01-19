@@ -104,7 +104,7 @@ class parking:
     #défintion des getter et setters des attributs
     @property
     def time(self):
-        return self.time
+        return self._time
     @time.setter
     def time(self,time):
         #check si time est bien un entier
@@ -337,7 +337,15 @@ Il était nécessaire de faires ces trois tables en premier afin de pouvoir les 
 Nous donnant alors le code SQL suivant :
 
 ```sql
-
+CREATE TABLE "acquisPark" (
+	"idAcquis"	INTEGER,
+	"idPark"	TEXT,
+	"free"	INTEGER,
+	"total"	INTEGER,
+	"occup"	REAL,
+	FOREIGN KEY("idPark") REFERENCES "infosPark"("id") ON UPDATE CASCADE,
+	PRIMARY KEY("idAcquis" AUTOINCREMENT)
+);
 ```
 
 #### Table ``acquisVelo``
@@ -349,14 +357,29 @@ Nous donnant alors le code SQL suivant :
 
 Nous donnant alors le code SQL suivant :
 
+```sql
+CREATE TABLE "acquisVelo" (
+	"idAcquis"	INTEGER,
+	"time"	INTEGER,
+	"idStat"	INTEGER,
+	"bikes"	INTEGER,
+	"dis"	INTEGER,
+	"free"	INTEGER,
+	"total"	INTEGER,
+	"occup"	REAL,
+	FOREIGN KEY("idStat") REFERENCES "infosVelo"("id") ON UPDATE CASCADE,
+	PRIMARY KEY("idAcquis" AUTOINCREMENT)
+);
+```
+
 Il me faut alors des fonctions pour enregistrer mes données dans ma base, je crée alors un deuxième module contenant mes fonctions d'enregistrement.
 
 #### Enregistrement d'un objet de classe ``parking``
 
+Je connait la forme de ma requête d'insertion, il me suffit alors de créer une fonction qui crée la requête et l'exécute
 
 #### Enregistrement d'un objet de classe ``velo``
 
-#### Enregistrement d'un objet de classe ``tram``
 
 ## Traitement des données
 Le traitement des données se fera via python et GNUplot. Dans un premier temps, nous ferons des graphiques qui ne seront que sauvegardés en fichiers images. A terme, si le temps le permet, il sera possible d'ajouter une interface graphique à notre programme

@@ -10,7 +10,7 @@ class parking:
 	#défintion des getter et setters des attributs
 	@property
 	def time(self):
-		return self.time
+		return self._time
 	@time.setter
 	def time(self,time):
 		#check si time est bien un entier
