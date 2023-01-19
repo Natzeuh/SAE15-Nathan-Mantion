@@ -86,7 +86,7 @@ class velo:
 
 	@property
 	def statID(self):
-		return self._parkID
+		return self._statID
 	@statID.setter
 	def statID(self,statID):
 		#check si statID est bien un entier
