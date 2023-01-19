@@ -180,16 +180,16 @@ class velo:
         else:
             raise TypeError("time type must be an int !")
 
-	@property
-	def statID(self):
-		return self._statID
-	@statID.setter
-	def statID(self,statID):
-		#check si statID est bien un entier
-		if type(statID) == int:
-			self._statID=statID
-		else:
-			raise TypeError("statID must be an int !")
+    @property
+    def statID(self):
+        return self._statID
+    @statID.setter
+    def statID(self,statID):
+        #check si statID est bien un entier
+        if type(statID) == int:
+            self._statID=statID
+        else:
+            raise TypeError("statID must be an int !")
 
     @property
     def bikes(self):
@@ -279,11 +279,11 @@ Nous donnant alors le code SQL suivant :
 
 ```SQL
 CREATE TABLE "infosPark" (
-	"id"	TEXT,
-	"name"	TEXT,
-	"lat"	REAL,
-	"long"	REAL,
-	PRIMARY KEY("id")
+    "id"    TEXT,
+    "name"    TEXT,
+    "lat"    REAL,
+    "long"    REAL,
+    PRIMARY KEY("id")
 );
 ```
 
@@ -298,12 +298,12 @@ Nous donnant alors le code SQL suivant :
 
 ```SQL
 CREATE TABLE "infosVelo" (
-	"id"	INTEGER,
-	"name"	TEXT,
-	"lat"	REAL,
-	"long"	REAL,
-	"capacity"	INTEGER,
-	PRIMARY KEY("id")
+    "id"    INTEGER,
+    "name"    TEXT,
+    "lat"    REAL,
+    "long"    REAL,
+    "capacity"    INTEGER,
+    PRIMARY KEY("id")
 );
 ```
 
@@ -318,10 +318,10 @@ Nous donnant alors le code SQL suivant :
 
 ```SQL
 CREATE TABLE "infosTram" (
-	"name"	TEXT,
-	"lat"	REAL,
-	"long"	REAL,
-	PRIMARY KEY("name")
+    "name"    TEXT,
+    "lat"    REAL,
+    "long"    REAL,
+    PRIMARY KEY("name")
 );
 ```
 
@@ -338,13 +338,13 @@ Nous donnant alors le code SQL suivant :
 
 ```sql
 CREATE TABLE "acquisPark" (
-	"idAcquis"	INTEGER,
-	"idPark"	TEXT,
-	"free"	INTEGER,
-	"total"	INTEGER,
-	"occup"	REAL,
-	FOREIGN KEY("idPark") REFERENCES "infosPark"("id") ON UPDATE CASCADE,
-	PRIMARY KEY("idAcquis" AUTOINCREMENT)
+    "idAcquis"    INTEGER,
+    "idPark"    TEXT,
+    "free"    INTEGER,
+    "total"    INTEGER,
+    "occup"    REAL,
+    FOREIGN KEY("idPark") REFERENCES "infosPark"("id") ON UPDATE CASCADE,
+    PRIMARY KEY("idAcquis" AUTOINCREMENT)
 );
 ```
 
@@ -359,16 +359,16 @@ Nous donnant alors le code SQL suivant :
 
 ```sql
 CREATE TABLE "acquisVelo" (
-	"idAcquis"	INTEGER,
-	"time"	INTEGER,
-	"idStat"	INTEGER,
-	"bikes"	INTEGER,
-	"dis"	INTEGER,
-	"free"	INTEGER,
-	"total"	INTEGER,
-	"occup"	REAL,
-	FOREIGN KEY("idStat") REFERENCES "infosVelo"("id") ON UPDATE CASCADE,
-	PRIMARY KEY("idAcquis" AUTOINCREMENT)
+    "idAcquis"    INTEGER,
+    "time"    INTEGER,
+    "idStat"    INTEGER,
+    "bikes"    INTEGER,
+    "dis"    INTEGER,
+    "free"    INTEGER,
+    "total"    INTEGER,
+    "occup"    REAL,
+    FOREIGN KEY("idStat") REFERENCES "infosVelo"("id") ON UPDATE CASCADE,
+    PRIMARY KEY("idAcquis" AUTOINCREMENT)
 );
 ```
 
@@ -378,8 +378,53 @@ Il me faut alors des fonctions pour enregistrer mes données dans ma base, je cr
 
 Je connait la forme de ma requête d'insertion, il me suffit alors de créer une fonction qui crée la requête et l'exécute
 
+```python
+def savePark(park:parking):
+    #connection base
+    connection = sq.connect("db.db")
+    #Création curseur pour l'excécution de la requête
+    cursor = connection.cursor()
+    #Création de la requête sql
+    query = f"""INSERT INTO acquisPark
+    (time, idPark, free, total, occup)
+    VALUES
+    ({park.time},'{park.parkID}',{park.free},{park.total},{100-(round(park.free/park.total,2))*100})
+    """
+    #Exécution de la requête
+    cursor.execute(query)
+    #Sauvegarde de la base avec modification
+    connection.commit()
+    #Fermeture des instances
+    cursor.close()
+    connection.close()
+```
+
 #### Enregistrement d'un objet de classe ``velo``
 
+De même que la fonction ``savePark`` je crée une fonction pour ma classe ``velo``
+
+```python
+def saveVelo(stat:velo):
+    #connection base
+    connection = sq.connect("db.db")
+    #Création curseur pour l'excécution de la requête
+    cursor = connection.cursor()
+    #calcul du nombre total de places 
+    total = stat.free + stat.dis + stat.bikes
+    #Création de la requête sql
+    query = f"""INSERT INTO acquisVelo
+    (time, idStat, bikes, dis, free, total, occup)
+    VALUES
+    ({stat.time},'{stat.statID}',{stat.bikes},{stat.dis},{stat.free},{total},{100-(round(stat.free/total,2))*100})
+    """
+    #Exécution de la requête
+    cursor.execute(query)
+    #Sauvegarde de la base avec modification
+    connection.commit()
+    #Fermeture des instances
+    cursor.close()
+    connection.close()
+```
 
 ## Traitement des données
 Le traitement des données se fera via python et GNUplot. Dans un premier temps, nous ferons des graphiques qui ne seront que sauvegardés en fichiers images. A terme, si le temps le permet, il sera possible d'ajouter une interface graphique à notre programme

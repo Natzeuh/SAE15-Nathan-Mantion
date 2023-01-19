@@ -42,4 +42,4 @@ def saveVelo(stat:velo):
 	#Fermeture des instances
 	cursor.close()
 	connection.close()
-  
+	
