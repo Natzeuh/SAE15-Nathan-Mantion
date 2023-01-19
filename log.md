@@ -180,16 +180,16 @@ class velo:
         else:
             raise TypeError("time type must be an int !")
 
-    @property
-    def statID(self):
-        return self._parkID
-    @statID.setter
-    def statID(self,statID):
-        #check si statID est bien un entier
-        if type(statID) == int:
-            self._statID=statID
-        else:
-            raise TypeError("statID must be an int !")
+	@property
+	def statID(self):
+		return self._statID
+	@statID.setter
+	def statID(self,statID):
+		#check si statID est bien un entier
+		if type(statID) == int:
+			self._statID=statID
+		else:
+			raise TypeError("statID must be an int !")
 
     @property
     def bikes(self):
