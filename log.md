@@ -427,4 +427,13 @@ def saveVelo(stat:velo):
 ```
 
 ## Traitement des données
-Le traitement des données se fera via python et GNUplot. Dans un premier temps, nous ferons des graphiques qui ne seront que sauvegardés en fichiers images. A terme, si le temps le permet, il sera possible d'ajouter une interface graphique à notre programme
+
+Le traitement des données se fera via python et GNUplot. Dans un premier temps, nous ferons des graphiques qui ne seront que sauvegardés en fichiers images.
+
+
+## Interprétation des données
+
+Avant toute analyse, il sera important de prendre en compte le contexte de ces données.
+La capture à commencé le 19/01/2023 à 14h30 pour finir 48 heures plus tard.
+Cela veut dire que dans le même temps, les manifestations et les grèves contre la réforme des retraites battaient leur plein
+Nos données proviennent donc d'un moment où le service des tramways était fortement perturbé, ou certains travailleurs ne se sont pas rendus à leur travail. En bref les données acquises ne représentent pas une utilisation habituelle des parkings et vélos de la ville. De plus, les données que nous avons ne nous garantissent pas l'exactitude de l'interprétation car nous ne connaisons pas les trajets des utilisateurs de parking et VéloMagg, encore moins pour les utilisateurs du Tram dont nous ne connaissons pas la fréquentation. Pour finir, nos données ne nous montrent que deux jours d'acquisitions. En bref, les données que nous allons interpréter ne prouvent rien. Notre interprétation sera alors surement fausse ou inexacte.
