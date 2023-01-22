@@ -434,6 +434,44 @@ Le traitement des données se fera via python et GNUplot. Dans un premier temps,
 ## Interprétation des données
 
 Avant toute analyse, il sera important de prendre en compte le contexte de ces données.
-La capture à commencé le 19/01/2023 à 14h30 pour finir 48 heures plus tard.
+La capture à commencé le 19/01/2023 à 14h30 pour finir le 22/01/2023 à 10h51
 Cela veut dire que dans le même temps, les manifestations et les grèves contre la réforme des retraites battaient leur plein
 Nos données proviennent donc d'un moment où le service des tramways était fortement perturbé, ou certains travailleurs ne se sont pas rendus à leur travail. En bref les données acquises ne représentent pas une utilisation habituelle des parkings et vélos de la ville. De plus, les données que nous avons ne nous garantissent pas l'exactitude de l'interprétation car nous ne connaisons pas les trajets des utilisateurs de parking et VéloMagg, encore moins pour les utilisateurs du Tram dont nous ne connaissons pas la fréquentation. Pour finir, nos données ne nous montrent que deux jours d'acquisitions. En bref, les données que nous allons interpréter ne prouvent rien. Notre interprétation sera alors surement fausse ou inexacte.
+
+#### Plage de données
+
+Dû à des erreurs de ma part, certains cas de figures n'ont pas été prévus pour êtres traités et ont causé des erreurs, causant par extension des coupures dans la capture de données. La plage de nos données est donc la suivante
+
+- 19/01/2022, 14h29 et 25 secondes à 19/01/2022, 15h07 et 26 secondes
+- 20/01/2022, 10h56 et 52 secondes à 22/01/2023, 10h51 et 58 secondes
+
+#### Exclusion de données
+
+Les données de la première plage ne portant que sur 30 minutes, elles ne sont pas suffisament significatives pour être traités, nous allons donc les supprimer
+
+```sql
+DELETE FROM acquisPark WHERE time < 1674208000
+DELETE FROM acquisVelo WHERE time < 1674208000
+```
+
+Rappelons ensuite le travail demandé
+
+- Etude du taux d'occupation des parkings voitures
+- Etude du taux d'occupation des parkings vélos
+- Etude du relai parking/velo
+
+Je vais alors dupliquer ma base
+
+Dans cette base dupliquée, je vais traiter mes données afin de réaliser l'étude sur le relai parking velo
+
+Pour réaliser cette étude, je ne vais pas étudier certains parkings voitures et vélos car ces derniers ne sont pas signifiants
+
+Seront donc exclus
+
+- Les parkings proches de gares
+- Les stations vélos qui sont en dehors d'un rayon de x d'un parking
+- Inversement, les parkings en dehors...
+
+Excluant donc les parkings suivants
+
+Et les stations suivantes
