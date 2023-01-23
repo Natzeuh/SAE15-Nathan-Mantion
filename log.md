@@ -469,9 +469,24 @@ Pour réaliser cette étude, je ne vais pas étudier certains parkings voitures 
 Seront donc exclus
 
 - Les parkings proches de gares
-- Les stations vélos qui sont en dehors d'un rayon de x d'un parking
-- Inversement, les parkings en dehors...
+- Les stations vélos qui sont en dehors d'un rayon de 250m d'un parking ou d'un arrêt de tram
+- Inversement, les parkings en dehors d'un rayon de 250m d'une station VeloMagg ou d'un arrêt de tram
 
 Excluant donc les parkings suivants
+- Saint Roch
+- Gare Montpellier Sud de France
+- Vicarello
 
-Et les stations suivantes
+
+Et les stations VeloMagg suivantes
+- Providence-Ovalie
+- Celleneuve
+- Jardin de La Lironde
+
+
+
+#### Création des graphiques
+
+###### Occupation des parkings voiture
+
+Pour afficher l'utilisation des parkings voiture nous tapons la commande suivante dans gnuplot
