@@ -489,4 +489,13 @@ Et les stations VeloMagg suivantes
 
 ###### Occupation des parkings voiture
 
-Pour afficher l'utilisation des parkings voiture nous tapons la commande suivante dans gnuplot
+Après plusieurs tests infructeux avec GNUplot et voyant le temps avant le rendu se réduire, je décide finalement d'abandonner gnuplot au profit de matplotlib, plus simple mais avec lequel j'ai l'habitude de travailler
+
+Nous avons alors le graphique suivant
+
+![Graphique de l'occupation des parkings](/Occupation_parkings.png)
+
+On remaque alors que durant la plage d'enregistriment, il y a deux pics d'utilisations vers 21h et 16h30
+On voit aussi que les parkings de Saint-Jean le Sec, du Corum et de la place de la Comédie sont les plus utilisés, atteignant parfois la capacité maximale
+
+Malheureusemnt, par manque de temps, je n'ai pas pu aller plus loin dans les analyses de données
