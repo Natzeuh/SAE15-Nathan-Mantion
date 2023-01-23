@@ -1,0 +1,2331 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "MMM_MMM_ArretsTram",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9026392122, 43.6301225726 ]
+			},
+			"properties" : {
+				"nom" : "CLAIRVAL",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8977621015, 43.6285421168 ]
+			},
+			"properties" : {
+				"nom" : "CH. DE GAULLE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.888644832, 43.6268173479 ]
+			},
+			"properties" : {
+				"nom" : "SAINT LAZARE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8832115119, 43.6262278395 ]
+			},
+			"properties" : {
+				"nom" : "AIGUELONGUE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.884138855, 43.6204316222 ]
+			},
+			"properties" : {
+				"nom" : "JEU DE MAIL DES ABBES",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8656084069, 43.5887833281 ]
+			},
+			"properties" : {
+				"nom" : "VIL. D'ANGOULEME",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9128847452, 43.6545986986 ]
+			},
+			"properties" : {
+				"nom" : "JACOU",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8730686979, 43.5936180102 ]
+			},
+			"properties" : {
+				"nom" : "LEMASSON",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9156883344, 43.6328282938 ]
+			},
+			"properties" : {
+				"nom" : "CENTURIONS",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8663890309, 43.5923970959 ]
+			},
+			"properties" : {
+				"nom" : "CROIX D'ARGENT",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8882422661, 43.6140145169 ]
+			},
+			"properties" : {
+				"nom" : "LES AUBES",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8602246009, 43.5838326256 ]
+			},
+			"properties" : {
+				"nom" : "SABINES",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8731493187, 43.5936850598 ]
+			},
+			"properties" : {
+				"nom" : "LEMASSON",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9128827238, 43.6545267036 ]
+			},
+			"properties" : {
+				"nom" : "JACOU",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8600911038, 43.5837538672 ]
+			},
+			"properties" : {
+				"nom" : "SABINES",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8758975853, 43.5949382049 ]
+			},
+			"properties" : {
+				"nom" : "SAINT CLEOPHAS",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8678052456, 43.595532849 ]
+			},
+			"properties" : {
+				"nom" : "MAS DREVON",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8760246668, 43.5948976783 ]
+			},
+			"properties" : {
+				"nom" : "SAINT CLEOPHAS",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9090616362, 43.6314115896 ]
+			},
+			"properties" : {
+				"nom" : "LA GALINE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8679274803, 43.5954796877 ]
+			},
+			"properties" : {
+				"nom" : "MAS DREVON",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8955369238, 43.600605599 ]
+			},
+			"properties" : {
+				"nom" : "MOULARES (HOTEL DE VILLE)",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8526397974, 43.6317041194 ]
+			},
+			"properties" : {
+				"nom" : "HOP. LAPEYRONIE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8939438111, 43.6075145861 ]
+			},
+			"properties" : {
+				"nom" : "PLACE DE L'EUROPE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8781471209, 43.6147866233 ]
+			},
+			"properties" : {
+				"nom" : "LOUIS BLANC",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9247798811, 43.6385533144 ]
+			},
+			"properties" : {
+				"nom" : "AUBE ROUGE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8379409448, 43.5708958846 ]
+			},
+			"properties" : {
+				"nom" : "SAINT JEAN LE SEC",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8955119258, 43.6005875764 ]
+			},
+			"properties" : {
+				"nom" : "MOULARES (HOTEL DE VILLE)",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9249058935, 43.6385795691 ]
+			},
+			"properties" : {
+				"nom" : "AUBE ROUGE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8781383682, 43.6146989805 ]
+			},
+			"properties" : {
+				"nom" : "LOUIS BLANC",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8174759139, 43.6275640063 ]
+			},
+			"properties" : {
+				"nom" : "HALLES DE LA PAILLADE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8757324259, 43.5994050746 ]
+			},
+			"properties" : {
+				"nom" : "NOUVEAU SAINT-ROCH",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8173500344, 43.6212459181 ]
+			},
+			"properties" : {
+				"nom" : "STADE DE LA MOSSON",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8615539515, 43.6291867385 ]
+			},
+			"properties" : {
+				"nom" : "UNIVERSITES DES SCIENCES ET LETTRES",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8994249051, 43.6016276555 ]
+			},
+			"properties" : {
+				"nom" : "PORT MARIANNE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8210939154, 43.6307217264 ]
+			},
+			"properties" : {
+				"nom" : "SAINT PAUL",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8798310304, 43.6083372496 ]
+			},
+			"properties" : {
+				"nom" : "COMEDIE",
+				"t1" : "X",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8332607965, 43.6346371658 ]
+			},
+			"properties" : {
+				"nom" : "MALBOSC",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8832198907, 43.6071194571 ]
+			},
+			"properties" : {
+				"nom" : "HOTEL DE VILLE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8994108586, 43.6015926481 ]
+			},
+			"properties" : {
+				"nom" : "PORT MARIANNE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8431396596, 43.6316132267 ]
+			},
+			"properties" : {
+				"nom" : "CHATEAU D'O",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8175139605, 43.6275639604 ]
+			},
+			"properties" : {
+				"nom" : "HALLES DE LA PAILLADE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8227204376, 43.6363560723 ]
+			},
+			"properties" : {
+				"nom" : "HAUTS DE MASSANE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8866739089, 43.6085805477 ]
+			},
+			"properties" : {
+				"nom" : "ANTIGONE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9099894888, 43.6033204817 ]
+			},
+			"properties" : {
+				"nom" : "MILLENAIRE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8948431198, 43.6042218456 ]
+			},
+			"properties" : {
+				"nom" : "RIVES DU LEZ",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8379312037, 43.5708222547 ]
+			},
+			"properties" : {
+				"nom" : "SAINT JEAN LE SEC",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8797306789, 43.608418241 ]
+			},
+			"properties" : {
+				"nom" : "COMEDIE",
+				"t1" : "X",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.82262349, 43.6363551377 ]
+			},
+			"properties" : {
+				"nom" : "HAUTS DE MASSANE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.849879797, 43.5751200457 ]
+			},
+			"properties" : {
+				"nom" : "VICTOIRE 2",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.890196867, 43.6089345008 ]
+			},
+			"properties" : {
+				"nom" : "LEON BLUM",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8277236492, 43.6389535898 ]
+			},
+			"properties" : {
+				"nom" : "EUROMEDECINE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.861604339, 43.6291116501 ]
+			},
+			"properties" : {
+				"nom" : "UNIVERSITES DES SCIENCES ET LETTRES",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8949640312, 43.6042320562 ]
+			},
+			"properties" : {
+				"nom" : "RIVES DU LEZ",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8832568282, 43.6071104907 ]
+			},
+			"properties" : {
+				"nom" : "HOTEL DE VILLE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8210907529, 43.6306294078 ]
+			},
+			"properties" : {
+				"nom" : "SAINT PAUL",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8901718835, 43.608907564 ]
+			},
+			"properties" : {
+				"nom" : "LEON BLUM",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8525573039, 43.6316335714 ]
+			},
+			"properties" : {
+				"nom" : "HOP. LAPEYRONIE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8331841584, 43.6345766913 ]
+			},
+			"properties" : {
+				"nom" : "MALBOSC",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9099631414, 43.6034169198 ]
+			},
+			"properties" : {
+				"nom" : "MILLENAIRE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8485518024, 43.6345437878 ]
+			},
+			"properties" : {
+				"nom" : "OCCITANIE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8174616359, 43.6212425575 ]
+			},
+			"properties" : {
+				"nom" : "STADE DE LA MOSSON",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8485979611, 43.634562325 ]
+			},
+			"properties" : {
+				"nom" : "OCCITANIE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8430125794, 43.6316084102 ]
+			},
+			"properties" : {
+				"nom" : "CHATEAU D'O",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8276649727, 43.6390355078 ]
+			},
+			"properties" : {
+				"nom" : "EUROMEDECINE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8866368328, 43.6085985201 ]
+			},
+			"properties" : {
+				"nom" : "ANTIGONE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8939808285, 43.6075135374 ]
+			},
+			"properties" : {
+				"nom" : "PLACE DE L'EUROPE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.849798938, 43.5752183113 ]
+			},
+			"properties" : {
+				"nom" : "VICTOIRE 2",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8842142949, 43.6036629608 ]
+			},
+			"properties" : {
+				"nom" : "PLACE CARNOT",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9157846991, 43.6037142117 ]
+			},
+			"properties" : {
+				"nom" : "PLACE DE FRANCE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9157403239, 43.6038146293 ]
+			},
+			"properties" : {
+				"nom" : "PLACE DE FRANCE",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9202995002, 43.6037846822 ]
+			},
+			"properties" : {
+				"nom" : "ODYSSEUM",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9204836413, 43.6038162658 ]
+			},
+			"properties" : {
+				"nom" : "ODYSSEUM",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8096218594, 43.617403744 ]
+			},
+			"properties" : {
+				"nom" : "JUVIGNAC",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8350884488, 43.6220184757 ]
+			},
+			"properties" : {
+				"nom" : "HOTEL DU DÉPARTEMENT",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8320300063, 43.6195608708 ]
+			},
+			"properties" : {
+				"nom" : "PILORY",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8396543792, 43.6176249062 ]
+			},
+			"properties" : {
+				"nom" : "PERGOLA",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8395141392, 43.6134795156 ]
+			},
+			"properties" : {
+				"nom" : "TONNELLES",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8467612609, 43.6113289773 ]
+			},
+			"properties" : {
+				"nom" : "JULES GUESDE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8548548929, 43.6102832986 ]
+			},
+			"properties" : {
+				"nom" : "ASTRUC",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8619485615, 43.6099538056 ]
+			},
+			"properties" : {
+				"nom" : "LES ARCEAUX",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8682527329, 43.6084807917 ]
+			},
+			"properties" : {
+				"nom" : "PLAN CABANES",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8798900064, 43.5925258522 ]
+			},
+			"properties" : {
+				"nom" : "SAINT-MARTIN",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8860592013, 43.5900623288 ]
+			},
+			"properties" : {
+				"nom" : "RESTANQUE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8950143552, 43.5995199168 ]
+			},
+			"properties" : {
+				"nom" : "GEORGES FRECHE - HOTEL DE VILLE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9033799544, 43.5980509697 ]
+			},
+			"properties" : {
+				"nom" : "PABLO PICASSO",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9265860779, 43.5822463865 ]
+			},
+			"properties" : {
+				"nom" : "BOIRARGUES",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9143005224, 43.5713812384 ]
+			},
+			"properties" : {
+				"nom" : "COUGOURLUDE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9048176165, 43.5708098822 ]
+			},
+			"properties" : {
+				"nom" : "LATTES CENRE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9639545132, 43.5577381887 ]
+			},
+			"properties" : {
+				"nom" : "PÉROLS - ETANG DE L'OR",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9573555606, 43.5653785676 ]
+			},
+			"properties" : {
+				"nom" : "PÉROLS CENTRE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9456785201, 43.572910211 ]
+			},
+			"properties" : {
+				"nom" : "PARC EXPO",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9355607649, 43.5778265295 ]
+			},
+			"properties" : {
+				"nom" : "ECO POLE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8258754124, 43.6158768945 ]
+			},
+			"properties" : {
+				"nom" : "CELLENEUVE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8843267687, 43.6037305787 ]
+			},
+			"properties" : {
+				"nom" : "PLACE CARNOT",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8949979084, 43.6125912682 ]
+			},
+			"properties" : {
+				"nom" : "POMPIGNANE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8948668175, 43.6126012759 ]
+			},
+			"properties" : {
+				"nom" : "POMPIGNANE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8307244096, 43.5748861362 ]
+			},
+			"properties" : {
+				"nom" : "SAINT JEAN DE VEDAS CENTRE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9222953619, 43.6341919361 ]
+			},
+			"properties" : {
+				"nom" : "ND SABLASSOU",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8760568575, 43.6030418988 ]
+			},
+			"properties" : {
+				"nom" : "RONDELET",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8305855248, 43.5749627869 ]
+			},
+			"properties" : {
+				"nom" : "SAINT JEAN DE VEDAS CENTRE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9222296459, 43.6342786853 ]
+			},
+			"properties" : {
+				"nom" : "ND SABLASSOU",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8441311767, 43.5717502635 ]
+			},
+			"properties" : {
+				"nom" : "LA CONDAMINE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.921084192, 43.6493392024 ]
+			},
+			"properties" : {
+				"nom" : "GEORGES POMPIDOU",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9294253708, 43.6468141983 ]
+			},
+			"properties" : {
+				"nom" : "VIA DOMITIA",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8441311767, 43.5717502635 ]
+			},
+			"properties" : {
+				"nom" : "LA CONDAMINE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8834545432, 43.6170178127 ]
+			},
+			"properties" : {
+				"nom" : "BEAUX ARTS",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9209674096, 43.6492916372 ]
+			},
+			"properties" : {
+				"nom" : "GEORGES POMPIDOU",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9090153398, 43.6314941873 ]
+			},
+			"properties" : {
+				"nom" : "LA GALINE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9157214079, 43.6327409364 ]
+			},
+			"properties" : {
+				"nom" : "CENTURIONS",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8665091009, 43.5924155059 ]
+			},
+			"properties" : {
+				"nom" : "CROIX D'ARGENT",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8657448581, 43.5887808964 ]
+			},
+			"properties" : {
+				"nom" : "VIL. D'ANGOULEME",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8835473011, 43.6169636825 ]
+			},
+			"properties" : {
+				"nom" : "BEAUX ARTS",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8891299927, 43.6036644954 ]
+			},
+			"properties" : {
+				"nom" : "VOLTAIRE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.889118782, 43.6037624942 ]
+			},
+			"properties" : {
+				"nom" : "VOLTAIRE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9295380837, 43.6466580098 ]
+			},
+			"properties" : {
+				"nom" : "VIA DOMITIA",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9025776535, 43.6302064784 ]
+			},
+			"properties" : {
+				"nom" : "CLAIRVAL",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8976479231, 43.6285963266 ]
+			},
+			"properties" : {
+				"nom" : "CH. DE GAULLE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8886986744, 43.6267091792 ]
+			},
+			"properties" : {
+				"nom" : "SAINT LAZARE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8832228398, 43.6263362542 ]
+			},
+			"properties" : {
+				"nom" : "AIGUELONGUE",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8839959216, 43.6204011845 ]
+			},
+			"properties" : {
+				"nom" : "JEU DE MAIL DES ABBES",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8907157977, 43.5909850861 ]
+			},
+			"properties" : {
+				"nom" : "GARCIA LORCA",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8940025323, 43.6039480046 ]
+			},
+			"properties" : {
+				"nom" : "RIVES DU LEZ",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8939819283, 43.6040734593 ]
+			},
+			"properties" : {
+				"nom" : "RIVES DU LEZ",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8801239865, 43.605691843 ]
+			},
+			"properties" : {
+				"nom" : "GARE SAINT-ROCH",
+				"t1" : "X",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.880273335, 43.6057102466 ]
+			},
+			"properties" : {
+				"nom" : "GARE SAINT-ROCH",
+				"t1" : "X",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8818028889, 43.6141874535 ]
+			},
+			"properties" : {
+				"nom" : "CORUM",
+				"t1" : "X",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8820316425, 43.6144978234 ]
+			},
+			"properties" : {
+				"nom" : "CORUM",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8797321544, 43.6052216182 ]
+			},
+			"properties" : {
+				"nom" : "GARE SAINT-ROCH",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8741964436, 43.6055040854 ]
+			},
+			"properties" : {
+				"nom" : "SAINT DENIS",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8960019973, 43.593518376 ]
+			},
+			"properties" : {
+				"nom" : "LA RAUZE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8882289152, 43.6139165185 ]
+			},
+			"properties" : {
+				"nom" : "LES AUBES",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8800639608, 43.6045329002 ]
+			},
+			"properties" : {
+				"nom" : "GARE SAINT-ROCH",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8799639522, 43.6046049464 ]
+			},
+			"properties" : {
+				"nom" : "GARE SAINT-ROCH",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8760610486, 43.6031447145 ]
+			},
+			"properties" : {
+				"nom" : "RONDELET",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8755869691, 43.5994048189 ]
+			},
+			"properties" : {
+				"nom" : "NOUVEAU SAINT-ROCH",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8760610486, 43.6031447145 ]
+			},
+			"properties" : {
+				"nom" : "RONDELET",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8760610486, 43.6031447145 ]
+			},
+			"properties" : {
+				"nom" : "RONDELET",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8726458978, 43.6062790656 ]
+			},
+			"properties" : {
+				"nom" : "SAINT DENIS",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8656495882, 43.6269898231 ]
+			},
+			"properties" : {
+				"nom" : "SAINT-ELOI",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.865764152, 43.6270341454 ]
+			},
+			"properties" : {
+				"nom" : "SAINT-ELOI",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8680628502, 43.6225778563 ]
+			},
+			"properties" : {
+				"nom" : "BOUTONNET",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8681813226, 43.6226102416 ]
+			},
+			"properties" : {
+				"nom" : "BOUTONNET",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8694407468, 43.6189968212 ]
+			},
+			"properties" : {
+				"nom" : "STADE PHILIPPIDES",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8695571604, 43.6190018422 ]
+			},
+			"properties" : {
+				"nom" : "STADE PHILIPPIDES",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8740725552, 43.616511801 ]
+			},
+			"properties" : {
+				"nom" : "ALBERT 1ER",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8741422685, 43.6165551385 ]
+			},
+			"properties" : {
+				"nom" : "ALBERT 1ER",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8818548454, 43.6142945093 ]
+			},
+			"properties" : {
+				"nom" : "CORUM",
+				"t1" : "X",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9040617463, 43.6026884133 ]
+			},
+			"properties" : {
+				"nom" : "MONDIAL 98",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.9039984128, 43.602873487 ]
+			},
+			"properties" : {
+				"nom" : "MONDIAL 98",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "R"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8196553003, 43.61625731 ]
+			},
+			"properties" : {
+				"nom" : "MOSSON",
+				"t1" : "X",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "O",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8820987403, 43.6144002205 ]
+			},
+			"properties" : {
+				"nom" : "CORUM",
+				"t1" : "O",
+				"t2" : "X",
+				"t3" : "O",
+				"t4" : "O",
+				"sens" : "A"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.873878992, 43.6148406167 ]
+			},
+			"properties" : {
+				"nom" : "ALBERT 1ER CATHEDRALE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8734808385, 43.6082499664 ]
+			},
+			"properties" : {
+				"nom" : "SAINT GUILHEM COURREAU",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8722639129, 43.6114748363 ]
+			},
+			"properties" : {
+				"nom" : "PEYROU ARC DE TRIOMPHE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "O",
+				"t4" : "X",
+				"sens" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 3.8766449483, 43.6064312273 ]
+			},
+			"properties" : {
+				"nom" : "OBSERVATOIRE",
+				"t1" : "O",
+				"t2" : "O",
+				"t3" : "X",
+				"t4" : "X",
+				"sens" : " "
+			}
+		}
+	]
+}
