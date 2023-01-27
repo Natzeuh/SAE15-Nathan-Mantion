@@ -28,7 +28,7 @@ Pour l'instant, nous garderons l'interprétation des données pour l'humain, il 
 
 ## Acquisition des données
 
-En regardant les données disponibles sur le site Open Data Montpellier, on voit que les données en rapport avec le tramway ne peuvent pas nous donner d'informations sur leur utilisation, nous ne pouvons avoir que des informations géographiques qui nous serviront pour le traitement et l'interpretation. Pour rendre mon code utilisable uniquement avec les programmes, je chosis tout de même d'ajouter une fonction pour récupérer le fichier contenant les informations sur les stations de tramway de la ville. Je profite de cette fonction pour prendre les mêmes informations sur les station veloMag. Pour les parkings automobiles, les informations n'existent pas sur le site de l'agglomération, je vais alors créer un fichier .csv manuellement.
+En regardant les données disponibles sur le site Open Data Montpellier, on voit que les données en rapport avec le tramway ne peuvent pas nous donner d'informations sur leur utilisation, nous ne pouvons avoir que des informations géographiques qui nous serviront pour le traitement et l'interpretation. Pour rendre mon code utilisable uniquement avec les programmes, je chosis tout de même d'ajouter une fonction pour récupérer le fichier contenant les informations sur les stations de tramway de la ville. Je profite de cette fonction pour prendre les mêmes informations sur les station veloMagg. Pour les parkings automobiles, les informations n'existent pas sur le site de l'agglomération, je vais alors créer un fichier .csv manuellement.
 
 #### Parkings automobiles
 
@@ -41,23 +41,23 @@ def getPark(idPark:str,path="."):
     return file.name #On retourne le chemin du fichier.
 ```
 
-#### Parkings veloMag
+#### Parkings veloMagg
 
 ```python
 def getVelo(path="."):
     response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
-    file=open(f"{path}/veloMag_{int(time.time())}.json","w+", encoding="UTF-8")#Création d'un fichier pour stocker le contenu du fichier .json téléchargé, si l'utilisateur veut enregistrer le fichier dans un répertoire particulier, il peut renseigner la variable ``path`` par défaut, la fonction sauvergarde le fichier dans le même répertoire que le programme
+    file=open(f"{path}/veloMagg_{int(time.time())}.json","w+", encoding="UTF-8")#Création d'un fichier pour stocker le contenu du fichier .json téléchargé, si l'utilisateur veut enregistrer le fichier dans un répertoire particulier, il peut renseigner la variable ``path`` par défaut, la fonction sauvergarde le fichier dans le même répertoire que le programme
     file.write(response.text) #Ecriture du fichier
     file.close() #Fermeture de l'instance du fichier
     return file.name #On retourne le chemin du ficher
 ```
 
-#### Emplacement des parkings veloMag et des stations de Tramway
+#### Emplacement des parkings veloMagg et des stations de Tramway
 
 ```python
 def getInfos(path="."):
     #Dictionnaire contenant les URLs des stations liés au moyen de transport 
-    urls = {"tram":"https://data.montpellier3m.fr/sites/default/files/ressources/MMM_MMM_ArretsTram.json","veloMag":"https://montpellier-fr-smoove.klervi.net/gbfs/en/station_information.json"}
+    urls = {"tram":"https://data.montpellier3m.fr/sites/default/files/ressources/MMM_MMM_ArretsTram.json","veloMagg":"https://montpellier-fr-smoove.klervi.net/gbfs/en/station_information.json"}
     files=[] #Liste qui contiendra les deux fichiers d'informations récupérés
     for key in urls.keys: #Boucle pour les deux urls
         response=requests.get(urls[key]) #Récupération du fichier
@@ -244,7 +244,7 @@ def getPark(idPark:str):
 ```python
 def getVelo():
     result=[] #Intialisation de la liste qui va contenir les objets velo, un objet par station
-    response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMag
+    response=requests.get("https://montpellier-fr-smoove.klervi.net/gbfs/en/station_status.json") #Acquisition du fichier json représentant l'état de toutes les stations velaMagg
     content=StringIO(response.text) #On convertit la chaine de caratéres du contenu du fichier en chaine considérable comme un fichier pour l'utiliser avec la libraire json
     content=json.load(content) #On load le fichier, il sera alors convertit en objets itérables et donc utilisables
     for station in content["data"]["stations"]: #le dictionnaire data contient la liste stations qui elle même contient les dictionnaires représentant chaque stations
@@ -442,8 +442,9 @@ Nos données proviennent donc d'un moment où le service des tramways était for
 
 Dû à des erreurs de ma part, certains cas de figures n'ont pas été prévus pour êtres traités et ont causé des erreurs, causant par extension des coupures dans la capture de données. La plage de nos données est donc la suivante
 
-- 19/01/2022, 14h29 et 25 secondes à 19/01/2022, 15h07 et 26 secondes
-- 20/01/2022, 10h56 et 52 secondes à 22/01/2023, 10h51 et 58 secondes
+- 19/01/2022, 14:29:25 au 19/01/2022, 15:07:26
+- 20/01/2022, 10:56:52 au 22/01/2023, 10:51:58
+- 23/01/2022, 13:08:41 au 27/01/2023, 14:02:40
 
 #### Exclusion de données
 
@@ -487,15 +488,192 @@ Et les stations VeloMagg suivantes
 
 #### Création des graphiques
 
-###### Occupation des parkings voiture
+Après plusieurs tests infructueux en utilisant GNUplot, je choisis de me rabattre sur matplotlib, librairie python avec laquelle j'ai déjà travaillé par le passé.
 
-Après plusieurs tests infructeux avec GNUplot et voyant le temps avant le rendu se réduire, je décide finalement d'abandonner gnuplot au profit de matplotlib, plus simple mais avec lequel j'ai l'habitude de travailler
+Je crée alors le module ``courbes`` qui va me permettre de tracer des courbes.
 
-Nous avons alors le graphique suivant
+Il contiendra 4 fonctions
+- ``showParkAll`` pour afficher le taux d'occupation sur tous les parkings sur une plage de temps donnée
+- ``showParkMoy`` pour afficher le taux d'occupation moyen des parkings sur une plage de temps donnée
+- ``showVeloAll`` pour afficher le taux d'occupation sur toutes les stations veloMagg sur une plage de temps donnée
+- ``showVeloMoy`` pour afficher le taux d'occupation moyen des stations veloMagg sur une plage de temps donnée
 
-![Graphique de l'occupation des parkings](/Occupation_parkings.png)
+##### Code du module
 
-On remaque alors que durant la plage d'enregistriment, il y a deux pics d'utilisations vers 21h et 16h30
-On voit aussi que les parkings de Saint-Jean le Sec, du Corum et de la place de la Comédie sont les plus utilisés, atteignant parfois la capacité maximale
+```python
+import matplotlib.pyplot as plt
+import sqlite3 as sq
+from datetime import datetime
 
-Malheureusemnt, par manque de temps, je n'ai pas pu aller plus loin dans les analyses de données
+parkings =['FR_MTP_ANTI','FR_MTP_COME','FR_MTP_CORU','FR_MTP_EURO','FR_MTP_FOCH','FR_MTP_GAMB','FR_MTP_GARE','FR_MTP_TRIA','FR_MTP_ARCT','FR_MTP_PITO','FR_MTP_CIRC','FR_MTP_SABI','FR_MTP_GARC','FR_CAS_SABL','FR_MTP_MOSS','FR_STJ_SJLC','FR_MTP_MEDC','FR_MTP_OCCI','FR_CAS_VICA','FR_MTP_GA109','FR_MTP_GA250','FR_CAS_CDGA','FR_MTP_ARCE','FR_MTP_POLY']
+linestyles = ["solid","dotted","dashed","dashdot"]
+colors = ["#D18970","#33D837","#DC8AAF","#7AD4E7","#B1D42B","#ABCEC0","#5D1889","#EF0ABB","#7B561C","#1564CF","#F12138","#D4455A","#D24C21","#1C5C18","#879D09","#5176DC"]
+
+
+def parkShowAll(debut,fin):
+    count=0
+    debut=datetime.timestamp(debut)
+    fin=datetime.timestamp(fin)
+    #création des listes de data
+    for park in parkings:
+        time=[]
+        occup=[]
+        
+        connection = sq.connect("db.db")
+        cursor = connection.cursor()
+        query=f"""SELECT time,occup FROM acquisPark WHERE idPark='{park}' AND time<{fin} AND time>{debut}"""
+        cursor.execute(query)
+        result = cursor.fetchall()
+        for record in result:
+            time.append(datetime.fromtimestamp(int(record[0]),datetime.now().tzname()))
+            occup.append(int(record[1]))
+        plt.plot(time,occup,label=park,linestyle=linestyles[count//14],color=colors[count%14])
+        count+=1
+        
+
+    plt.ylabel("Taux d'occupation (en %)")
+    plt.xlabel("Temps")
+    plt.legend(bbox_to_anchor=(1.04, 0), loc="lower left", borderaxespad=0)
+    plt.show()
+
+
+def parkShowMoy(debut,fin):
+    debut=int(datetime.timestamp(debut))
+    fin=int(datetime.timestamp(fin))
+    times=[]
+    moyennes=[]
+    for time in range(debut,fin,300):
+        somme=0
+        entries=0
+        connection = sq.connect("db.db")
+        cursor = connection.cursor()
+        query=f"""SELECT occup FROM acquisPark WHERE time<{time+300} AND time>{time}"""
+        cursor.execute(query)
+        result = cursor.fetchall()
+        for record in result:
+            somme+=record[0]
+            entries+=1
+        if entries!=0:
+            moyenne=round(somme/entries,2)
+            times.append(datetime.fromtimestamp(time,datetime.now().tzname()))
+            moyennes.append(moyenne)
+    plt.plot(times,moyennes)
+    plt.ylabel("Moyenne du taux d'occupation (en %)")
+    plt.xlabel("Temps")
+    plt.show()
+
+
+def veloShowAll(debut,fin):
+    count=0
+    debut=datetime.timestamp(debut)
+    fin=datetime.timestamp(fin)
+    #création des listes de data
+    for i in range(1,59):
+        time=[]
+        occup=[]
+        
+        connection = sq.connect("db.db")
+        cursor = connection.cursor()
+        query=f"""SELECT time,occup FROM acquisVelo WHERE idStat={i} AND time<{fin} AND time>{debut}"""
+        cursor.execute(query)
+        result = cursor.fetchall()
+        for record in result:
+            time.append(datetime.fromtimestamp(int(record[0]),datetime.now().tzname()))
+            occup.append(int(record[1]))
+        print(count//15,i)
+        plt.plot(time,occup,label=i,linestyle=linestyles[count//15],color=colors[count%15])
+        count+=1
+        
+
+    plt.ylabel("Taux d'occupation (en %)")
+    plt.xlabel("Temps")
+    plt.legend(bbox_to_anchor=(1.04, 0), loc="center left", borderaxespad=0)
+    plt.show()
+
+def veloShowMoy(debut,fin):
+    debut=int(datetime.timestamp(debut))
+    fin=int(datetime.timestamp(fin))
+    times=[]
+    moyennes=[]
+    for time in range(debut,fin,300):
+        somme=0
+        entries=0
+        connection = sq.connect("db.db")
+        cursor = connection.cursor()
+        query=f"""SELECT occup FROM acquisVelo WHERE time<{time+300} AND time>{time}"""
+        cursor.execute(query)
+        result = cursor.fetchall()
+        for record in result:
+            somme+=record[0]
+            entries+=1
+        if entries!=0:
+            moyenne=round(somme/entries,2)
+            times.append(datetime.fromtimestamp(time,datetime.now().tzname()))
+            moyennes.append(moyenne)
+    plt.plot(times,moyennes)
+    plt.ylabel("Moyenne du taux d'occupation (en %)")
+    plt.xlabel("Temps")
+    plt.show()
+```
+
+#### Analyse de l'occupation des parkings
+
+On lance l'affichage de nos données de parkings, donnat le graphe suivant
+
+<div align=center>
+
+![graphe de l'occupation des parkings](/Occupation_parkings_all.png)
+
+*Fig.1 Taux d'occupation des parkings de l'agglomération de Montpellier en fonction du temps*
+</div>
+
+On remarque qu'il y a une baisse de l'occupation des parkings pendant la nuit, on peut supposer que cette baisse est due au fait que les utilisateurs des parkings ne sont pas des habitants aux alentours et donc ne laissent pas leur voiture dans le parking la nuit. Toutefois, rien nous prouve la véracité de cette hypothèse.
+
+Pour mesurer l'utilisation de tous les parkings de l'agglomération, une moyenne d etous les parkings semble être plus appropriée
+
+<div align=center>
+
+![graphe de l'occupation des parkings moyenne](/Occupation_parkings_moy.png)
+
+*Fig.2 Moyenne du taux d'occupation des parkings de l'agglomération de Montpellier en fonction du temps*
+</div>
+
+La première chose qui est remarquable dans ce graphique sont les pics au long de la courbe, on voit un pic croissant suivi immédiatement d'un pic décroissant. Zoomons sur un de ces pics et comparons le à tous les parkings pour essayer de comprendre d'où viennent ces pics
+
+|Moyenne|Tous les parkings|
+|:-:|:-:|
+| ![graphe de l'occupation des parkings moyenne](/Zoom_parkings_moy.png) | ![graphe de l'occupation de tous les parkings](/zoom%20courbes%20g%C3%A9n%C3%A9ral.png) |
+|*Fig.3 Zoom sur un des pics de la moyenne*| *Fig.4 Zoom au même endroit pour tous les parkings*|
+
+En comparant ces graphiques, on ne remarque pas de différences dans les données justifiant ces pics. L'explication de ces pics est autre et doit venir de la création de l'affichage. En effet cette derniére donne la moyenne de tous les parkings toutes les 300 secondes. Or, lors de l'acquisition, chaque donnée à été captée une a une, prenant donc un peu de temps et donc toutes les données n'ont pas été captées au même instant T. Si l'acquisition et l'affichage de la moyenne ne prennent pas leur t0 en même temps, il y aura un déphasage, expliquant alors ces pics.
+
+Sans prendre en compte ces pics, on voit alors que l'utilisation maxium det ous les parkings ne dépasse pas les 60% et n'est jamais en dessous des 20%
+
+
+#### Analyse de l'occupation des stations de vélos
+
+On lance l'affichage de nos données de stations VeloMagg nous donnant le graphe suivant:
+
+<div align=center>
+
+![Graphique de toutes les stations veloMagg](/Occupation_velos_all.png)
+
+*Fig.5 Taux d'occupation des stations VeloMagg en fonction du temps*
+
+</div>
+
+Le nombre de stations doublé du fait que les taux d'occupation sont souvent similaires (il y a peu de places a chaque station, donc une place occupée fait forcément monter la moyenne d'une dizaine de pourcents) Le graphique est alors illisble. Nous allons alors utiliser la moyenne afin d'y voir plus clair
+
+<div align=center>
+
+![Graphique de toutes les stations veloMagg](/Occupation_velos_moy.png)
+
+*Fig.6 Moyenne du taux d'occupation des stations VeloMagg en fonction du temps*
+
+</div>
+
+On remarque que le comportement de l'occupation est inverse a celui des parkings. Les stations ont tendance à être pleines la nuit. Cela peut s'expliquer par le fait que les usagers ne sont que locataires des vélos que, hors de ces stations, il est compliqué de les stationner autre part, et que la distance réalisables avec ces derniers est beaucoup plus faible que la distance réalisable avec une voiture. 
+
+On voit aussi par ce graphique que, sur cette semaine, les vélos ont été plus utilisés le mardi et le mercredi que le jeudi/vendredi (car si les stations ne sont pas utlisés, cela veut dire que les vélos sont en circulation) Pour trouver une explication, il faudrait à mon avir mener une étude sur plusieurs jours afin de savoir si ces différences d'utilisation sont un schéma réccurent ou une simple coïncidence.
+
+
