@@ -677,3 +677,9 @@ On remarque que le comportement de l'occupation est inverse a celui des parkings
 On voit aussi par ce graphique que, sur cette semaine, les vélos ont été plus utilisés le mardi et le mercredi que le jeudi/vendredi (car si les stations ne sont pas utlisés, cela veut dire que les vélos sont en circulation) Pour trouver une explication, il faudrait à mon avir mener une étude sur plusieurs jours afin de savoir si ces différences d'utilisation sont un schéma réccurent ou une simple coïncidence.
 
 
+
+
+
+#### Etude du relai voiture/vélo
+
+Il est a mon avis impossible, avec les données collectées d'avoir une anaylse correcte du relai voiture/vélo en effet de nombreux paramètres comme l'utilisation du tram, le fait que les usagers des parkings utilisent où non le vélo après s'être garés et bien d'autres ne soient pas des données connues ne nous permet pas de mener une analyse relativement tangible, de même avec les deux analyse précédentes, nos données peuvent être de simples coïcidences. Il faudrait mener une nouvelle étude sur un temps plus long
